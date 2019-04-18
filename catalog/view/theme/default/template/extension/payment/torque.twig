@@ -1,0 +1,52 @@
+<div class="buttons">
+  <div class="pull-right">
+    <a class="btn btn-primary" href="" data-toggle="modal" data-backdrop="static" data-keyboard="false" data-target="#torque-modal">{{ button_confirm }}</a>
+  </div>
+</div>
+	<link href='catalog/view/theme/default/stylesheet/torque-style.css' rel="stylesheet">
+	<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,800' rel='stylesheet'>
+<!--- Modal Popup --->
+<div class="modal" id="torque-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" onClick="window.location.reload()">&times;</span></button>
+                <span class='logo-xtc'><img src='http://cdn.torqueintegrations.com/logotorque.png' /></span>
+                <span class='xtc-payment-text-header'><h2>{{ heading_title }}</h2></span>
+            </div>
+            <div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+					    <div class="col-md-auto">
+							<div class='xtc-amount-send'>
+								<span class='xtc-label'>Send:</span>
+								<div class='xtc-amount-box'>{{ amount_xtc }}</div><div class='xtc-box'>XTC</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					    <div class="col-md-auto">
+							<div class='xtc-address'>
+								<span class='xtc-label'>To this address:</span>
+								<div class='xtc-address-box'>{{ integrated_address }}</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+					    <div class="col-md-auto">
+							<div class='xtc-qr-code'>
+								<span class='xtc-label'>Or scan QR:</span>
+								<div class='xtc-qr-code-box'><img src='https://api.qrserver.com/v1/create-qr-code/? size=200x200&data={{ url }}' /></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+            <div class="modal-footer">
+                <a href='https://gettorque.org' target='_blank'>Help</a> | <a href='https://gettorque.org' target='_blank'>About Torque</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--- End Modal --->
